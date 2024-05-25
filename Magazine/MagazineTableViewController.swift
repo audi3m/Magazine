@@ -14,7 +14,6 @@ class MagazineTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "SeSAC TRAVEL"
-        tableView.rowHeight = 470
         
     }
     
