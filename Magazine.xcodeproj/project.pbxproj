@@ -17,6 +17,8 @@
 		D4A51BDE2C01F56D00A5C15A /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A51BDD2C01F56D00A5C15A /* MagazineTableViewController.swift */; };
 		D4A51BE12C01FC3600A5C15A /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A51BDF2C01FC3600A5C15A /* MagazineInfo.swift */; };
 		D4A51BE22C01FC3600A5C15A /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A51BE02C01FC3600A5C15A /* Restaurant.swift */; };
+		D4A51BE62C020A3800A5C15A /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A51BE52C020A3800A5C15A /* RestaurantTableViewController.swift */; };
+		D4A51BE82C020A4400A5C15A /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A51BE72C020A4400A5C15A /* RestaurantTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		D4A51BDD2C01F56D00A5C15A /* MagazineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewController.swift; sourceTree = "<group>"; };
 		D4A51BDF2C01FC3600A5C15A /* MagazineInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		D4A51BE02C01FC3600A5C15A /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		D4A51BE52C020A3800A5C15A /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
+		D4A51BE72C020A4400A5C15A /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,16 +71,34 @@
 				D4A51BC72C01F30E00A5C15A /* AppDelegate.swift */,
 				D4A51BC92C01F30E00A5C15A /* SceneDelegate.swift */,
 				D4A51BCB2C01F30E00A5C15A /* ViewController.swift */,
-				D4A51BDD2C01F56D00A5C15A /* MagazineTableViewController.swift */,
-				D4A51BDB2C01F56000A5C15A /* MagazineTableViewCell.swift */,
+				D4A51BE42C020A0A00A5C15A /* Restaurant */,
+				D4A51BE32C0209F800A5C15A /* Magazine */,
 				D4A51BCD2C01F30E00A5C15A /* Main.storyboard */,
-				D4A51BDF2C01FC3600A5C15A /* MagazineInfo.swift */,
-				D4A51BE02C01FC3600A5C15A /* Restaurant.swift */,
 				D4A51BD02C01F30F00A5C15A /* Assets.xcassets */,
 				D4A51BD22C01F30F00A5C15A /* LaunchScreen.storyboard */,
 				D4A51BD52C01F30F00A5C15A /* Info.plist */,
 			);
 			path = Magazine;
+			sourceTree = "<group>";
+		};
+		D4A51BE32C0209F800A5C15A /* Magazine */ = {
+			isa = PBXGroup;
+			children = (
+				D4A51BDF2C01FC3600A5C15A /* MagazineInfo.swift */,
+				D4A51BDD2C01F56D00A5C15A /* MagazineTableViewController.swift */,
+				D4A51BDB2C01F56000A5C15A /* MagazineTableViewCell.swift */,
+			);
+			path = Magazine;
+			sourceTree = "<group>";
+		};
+		D4A51BE42C020A0A00A5C15A /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				D4A51BE02C01FC3600A5C15A /* Restaurant.swift */,
+				D4A51BE52C020A3800A5C15A /* RestaurantTableViewController.swift */,
+				D4A51BE72C020A4400A5C15A /* RestaurantTableViewCell.swift */,
+			);
+			path = Restaurant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +178,8 @@
 				D4A51BE22C01FC3600A5C15A /* Restaurant.swift in Sources */,
 				D4A51BC82C01F30E00A5C15A /* AppDelegate.swift in Sources */,
 				D4A51BCA2C01F30E00A5C15A /* SceneDelegate.swift in Sources */,
+				D4A51BE62C020A3800A5C15A /* RestaurantTableViewController.swift in Sources */,
+				D4A51BE82C020A4400A5C15A /* RestaurantTableViewCell.swift in Sources */,
 				D4A51BE12C01FC3600A5C15A /* MagazineInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

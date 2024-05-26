@@ -6,7 +6,7 @@
 //  Created by Den on 5/20/24.
 //
 
-import Foundation
+import UIKit
 
 struct Restaurant {    
     let image: String
@@ -18,6 +18,17 @@ struct Restaurant {
     let category: String
     let price: Int
     let type: Int
+    var like: Bool = false
+}
+
+enum RestaurantCategory: String {
+    case korean = "한식"
+    case chinese = "중식"
+    case japanese = "일식"
+    case western = "양식"
+    case cafe = "카페"
+    case bunsic = "분식"
+    case kyeongyang = "경양식"
 }
 
 struct RestaurantList {
@@ -201,4 +212,18 @@ struct RestaurantList {
     ]
 }
 
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+}
 
