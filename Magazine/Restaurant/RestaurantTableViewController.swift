@@ -18,6 +18,7 @@
 //}
 
 import UIKit
+import Kingfisher
 
 class RestaurantTableViewController: UITableViewController {
     
@@ -42,7 +43,7 @@ class RestaurantTableViewController: UITableViewController {
         let restaurant = list[indexPath.row]
         
         let url = URL(string: restaurant.image)
-        cell.restaurantImageView.load(url: url!)
+        cell.restaurantImageView.kf.setImage(with: url) 
         cell.restaurantImageView.backgroundColor = .systemGray6
         cell.restaurantImageView.contentMode = .scaleAspectFill
         cell.restaurantImageView.layer.cornerRadius = 10
