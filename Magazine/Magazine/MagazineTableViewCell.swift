@@ -14,4 +14,6 @@ class MagazineTableViewCell: UITableViewCell {
     @IBOutlet var subtitleLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     
+    
+    
 }
