@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D4228BF32C04082100EC924A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D4228BF22C04082100EC924A /* Kingfisher */; };
+		D4228C742C06233500EC924A /* UILabel+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4228C732C06233500EC924A /* UILabel+Ex.swift */; };
 		D4A51BC82C01F30E00A5C15A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A51BC72C01F30E00A5C15A /* AppDelegate.swift */; };
 		D4A51BCA2C01F30E00A5C15A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A51BC92C01F30E00A5C15A /* SceneDelegate.swift */; };
 		D4A51BCC2C01F30E00A5C15A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A51BCB2C01F30E00A5C15A /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D4228C732C06233500EC924A /* UILabel+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ex.swift"; sourceTree = "<group>"; };
 		D4A51BC42C01F30E00A5C15A /* Magazine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magazine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A51BC72C01F30E00A5C15A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4A51BC92C01F30E00A5C15A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4228C722C06232100EC924A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4228C732C06233500EC924A /* UILabel+Ex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D4A51BBB2C01F30D00A5C15A = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +85,7 @@
 				D4A51BCB2C01F30E00A5C15A /* ViewController.swift */,
 				D4A51BE42C020A0A00A5C15A /* Restaurant */,
 				D4A51BE32C0209F800A5C15A /* Magazine */,
+				D4228C722C06232100EC924A /* Extensions */,
 				D4A51BCD2C01F30E00A5C15A /* Main.storyboard */,
 				D4A51BD02C01F30F00A5C15A /* Assets.xcassets */,
 				D4A51BD22C01F30F00A5C15A /* LaunchScreen.storyboard */,
@@ -185,6 +196,7 @@
 				D4A51BDC2C01F56000A5C15A /* MagazineTableViewCell.swift in Sources */,
 				D4A51BE22C01FC3600A5C15A /* Restaurant.swift in Sources */,
 				D4A51BC82C01F30E00A5C15A /* AppDelegate.swift in Sources */,
+				D4228C742C06233500EC924A /* UILabel+Ex.swift in Sources */,
 				D4A51BCA2C01F30E00A5C15A /* SceneDelegate.swift in Sources */,
 				D4A51BE62C020A3800A5C15A /* RestaurantTableViewController.swift in Sources */,
 				D4A51BE82C020A4400A5C15A /* RestaurantTableViewCell.swift in Sources */,

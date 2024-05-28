@@ -9,17 +9,15 @@ import UIKit
 import Kingfisher
 
 class RestaurantTableViewCell: UITableViewCell {
+    
+    static let identifier = "restaurantCell"
 
     @IBOutlet var restaurantImageView: UIImageView!
-    
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var phoneNumberLabel: UILabel!
-    
     @IBOutlet var likeButton: UIButton!
-    
     @IBOutlet var categoryLabel: UILabel!
-    
     @IBOutlet var priceLabel: UILabel!
     
     
@@ -33,21 +31,13 @@ class RestaurantTableViewCell: UITableViewCell {
         self.restaurantImageView.contentMode = .scaleAspectFill
         self.restaurantImageView.layer.cornerRadius = 10
         
-        self.nameLabel.font = .boldSystemFont(ofSize: 18)
-        
-        self.categoryLabel.font = .systemFont(ofSize: 13)
-        self.categoryLabel.layer.cornerRadius = 3
-        self.categoryLabel.layer.borderWidth = 1
+        self.nameLabel.setting(size: 18, weight: .bold)
+        self.categoryLabel.setting(size: 13, cornerRadius: 3, borderWidth: 1)
+        self.addressLabel.setting(size: 13, color: .darkGray)
+        self.phoneNumberLabel.setting(size: 13, color: .darkGray)
+        self.priceLabel.setting(size: 15, weight: .bold)
         
         self.likeButton.tintColor = .systemPink
-        
-        self.addressLabel.font = .systemFont(ofSize: 13)
-        self.addressLabel.textColor = .darkGray
-        
-        self.phoneNumberLabel.font = .systemFont(ofSize: 13)
-        self.phoneNumberLabel.textColor = .darkGray
-        
-        self.priceLabel.font = .boldSystemFont(ofSize: 15)
          
     }
     
@@ -57,11 +47,10 @@ class RestaurantTableViewCell: UITableViewCell {
         restaurantImageView.kf.setImage(with: url)
         
         nameLabel.text = data.name
-        categoryLabel.text = " " + data.category + " "
-         
+        categoryLabel.text = data.categoryForLabel
         addressLabel.text = data.address
         phoneNumberLabel.text = data.phoneNumber
-        priceLabel.text = "￦ \(data.price.formatted())"
+        priceLabel.text = data.priceLabel
          
         let image = UIImage(systemName: data.like ? "heart.fill" : "heart")
         likeButton.setImage(image, for: .normal)
@@ -69,6 +58,8 @@ class RestaurantTableViewCell: UITableViewCell {
         
     }
 }
+
+
 
 
 

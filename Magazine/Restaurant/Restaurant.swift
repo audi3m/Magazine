@@ -19,20 +19,18 @@ struct Restaurant {
     let price: Int
     let type: Int
     var like: Bool = false
-}
-
-enum RestaurantCategory: String {
-    case korean = "한식"
-    case chinese = "중식"
-    case japanese = "일식"
-    case western = "양식"
-    case cafe = "카페"
-    case bunsic = "분식"
-    case kyeongyang = "경양식"
+    
+    var categoryForLabel: String {
+        " " + category + " "
+    }
+    
+    var priceLabel: String {
+        "￦ \(price.formatted())"
+    }
 }
 
 struct RestaurantList {
-    let restaurantArray: [Restaurant] = [
+    static let restaurantArray: [Restaurant] = [
         Restaurant(
             image: "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20170712_44%2F1499829806371zeBdS_JPEG%2FIMG_1167.jpg",
             latitude: 37.514746,

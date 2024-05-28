@@ -11,13 +11,14 @@ class RestaurantTableViewController: UITableViewController, UISearchBarDelegate 
     
     @IBOutlet var searchBar: UISearchBar!
     
-    let list = RestaurantList().restaurantArray
+    let list = RestaurantList.restaurantArray
     var filteredList: [Restaurant] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Restaurant"
         searchBar.delegate = self
+        searchBar.placeholder = "검색"
         filteredList = list
         
         let all = UIBarButtonItem(title: "전체", style: .plain, target: self, action: #selector(allBarButtonClicked))
@@ -29,7 +30,7 @@ class RestaurantTableViewController: UITableViewController, UISearchBarDelegate 
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath) as! RestaurantTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.identifier, for: indexPath) as! RestaurantTableViewCell
         let restaurant = filteredList[indexPath.row]
         
         cell.configureData(data: restaurant)
@@ -57,6 +58,7 @@ class RestaurantTableViewController: UITableViewController, UISearchBarDelegate 
                 searchList.append(item)
             }
         }
+        
         filteredList = searchList
         view.endEditing(true)
         tableView.reloadData()
