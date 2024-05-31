@@ -9,8 +9,6 @@ import UIKit
 import Kingfisher
 
 class RestaurantTableViewCell: UITableViewCell {
-    
-    static let identifier = "restaurantCell"
 
     @IBOutlet var restaurantImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
@@ -59,18 +57,3 @@ class RestaurantTableViewCell: UITableViewCell {
     }
 }
 
-
-
-
-
-//struct Restaurant {
-//    let image: String
-//    let latitude: Double
-//    let longitude: Double
-//    let name: String
-//    let address: String
-//    let phoneNumber: String
-//    let category: String
-//    let price: Int
-//    let type: Int
-//}

@@ -21,6 +21,7 @@
 		D4A51BE22C01FC3600A5C15A /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A51BE02C01FC3600A5C15A /* Restaurant.swift */; };
 		D4A51BE62C020A3800A5C15A /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A51BE52C020A3800A5C15A /* RestaurantTableViewController.swift */; };
 		D4A51BE82C020A4400A5C15A /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A51BE72C020A4400A5C15A /* RestaurantTableViewCell.swift */; };
+		D4F2B6952C0A038F00F575C2 /* TableViewCell+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2B6942C0A038F00F575C2 /* TableViewCell+Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		D4A51BE02C01FC3600A5C15A /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		D4A51BE52C020A3800A5C15A /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		D4A51BE72C020A4400A5C15A /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		D4F2B6942C0A038F00F575C2 /* TableViewCell+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewCell+Ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				D4228C732C06233500EC924A /* UILabel+Ex.swift */,
+				D4F2B6942C0A038F00F575C2 /* TableViewCell+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				D4A51BC82C01F30E00A5C15A /* AppDelegate.swift in Sources */,
 				D4228C742C06233500EC924A /* UILabel+Ex.swift in Sources */,
 				D4A51BCA2C01F30E00A5C15A /* SceneDelegate.swift in Sources */,
+				D4F2B6952C0A038F00F575C2 /* TableViewCell+Ex.swift in Sources */,
 				D4A51BE62C020A3800A5C15A /* RestaurantTableViewController.swift in Sources */,
 				D4A51BE82C020A4400A5C15A /* RestaurantTableViewCell.swift in Sources */,
 				D4A51BE12C01FC3600A5C15A /* MagazineInfo.swift in Sources */,

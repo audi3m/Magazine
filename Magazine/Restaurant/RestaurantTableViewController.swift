@@ -30,7 +30,7 @@ class RestaurantTableViewController: UITableViewController, UISearchBarDelegate 
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.identifier, for: indexPath) as! RestaurantTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.id, for: indexPath) as! RestaurantTableViewCell
         let restaurant = filteredList[indexPath.row]
         
         cell.configureData(data: restaurant)
@@ -58,7 +58,6 @@ class RestaurantTableViewController: UITableViewController, UISearchBarDelegate 
                 searchList.append(item)
             }
         }
-        
         filteredList = searchList
         view.endEditing(true)
         tableView.reloadData()
