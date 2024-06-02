@@ -14,6 +14,9 @@ extension UILabel {
         self.textColor = color
         self.layer.cornerRadius = cornerRadius
         self.layer.borderWidth = borderWidth
+        if borderWidth != 0 {
+            self.layer.borderColor = UIColor.label.cgColor
+        }
         self.numberOfLines = numberOfLines
         self.textAlignment = align
     }

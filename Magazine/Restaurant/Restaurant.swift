@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MapKit
 
-struct Restaurant {    
+struct Restaurant {
     let image: String
     let latitude: Double
     let longitude: Double
@@ -26,6 +27,10 @@ struct Restaurant {
     
     var priceLabel: String {
         "￦ \(price.formatted())"
+    }
+    
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 }
 
@@ -210,18 +215,31 @@ struct RestaurantList {
     ]
 }
 
-
-extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
+extension [Restaurant] {
+    var coordinates: [CLLocationCoordinate2D] {
+        self.map { $0.coordinate }
     }
+    
+    func region() -> MKCoordinateRegion {
+        guard !self.isEmpty else { return MKCoordinateRegion() }
+        
+        let latitude = self.map { $0.coordinate.latitude }
+        let longitude = self.map { $0.coordinate.longitude }
+        
+        let minLatitude = latitude.min()!
+        let minLongitude = longitude.min()!
+        let maxLatitude = latitude.max()!
+        let maxLongitude = longitude.max()!
+        
+        let center = CLLocationCoordinate2D(latitude: (minLatitude + maxLatitude) / 2,
+                                            longitude: (minLongitude + maxLongitude) / 2)
+        
+        let span = MKCoordinateSpan(latitudeDelta: (maxLatitude - minLatitude) * 1.2,
+                                    longitudeDelta: (maxLongitude - minLongitude) * 1.2)
+        
+        return MKCoordinateRegion(center: center, span: span)
+        
+    }
+    
+    
 }
-

@@ -31,7 +31,7 @@ class RestaurantTableViewCell: UITableViewCell {
         
         self.nameLabel.setting(size: 18, weight: .bold)
         self.categoryLabel.setting(size: 13, cornerRadius: 3, borderWidth: 1)
-        self.addressLabel.setting(size: 13, color: .darkGray)
+        self.addressLabel.setting(size: 13, color: .darkGray, numberOfLines: 0)
         self.phoneNumberLabel.setting(size: 13, color: .darkGray)
         self.priceLabel.setting(size: 15, weight: .bold)
         
@@ -56,4 +56,3 @@ class RestaurantTableViewCell: UITableViewCell {
         
     }
 }
-

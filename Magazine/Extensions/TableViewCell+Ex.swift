@@ -12,3 +12,9 @@ extension UITableViewCell {
         String(describing: self)
     }
 }
+
+extension UIViewController {
+    static var id: String {
+        String(describing: self)
+    }
+}
