@@ -18,7 +18,6 @@ class RestaurantTableViewCell: UITableViewCell {
     @IBOutlet var categoryLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         configureLayout()
@@ -40,7 +39,6 @@ class RestaurantTableViewCell: UITableViewCell {
     }
     
     func configureData(data: Restaurant) {
-        
         let url = URL(string: data.image)
         restaurantImageView.kf.setImage(with: url)
         
@@ -53,6 +51,5 @@ class RestaurantTableViewCell: UITableViewCell {
         let image = UIImage(systemName: data.like ? "heart.fill" : "heart")
         likeButton.setImage(image, for: .normal)
         likeButton.tintColor = .systemPink
-        
     }
 }

@@ -33,7 +33,6 @@ class RestaurantViewController: UIViewController {
         let tag = sender.tag
         filteredList[tag].like.toggle()
         tableView.reloadRows(at: [IndexPath.SubSequence(row: sender.tag, section: 0)], with: .automatic)
-        
     }
     
     @objc func leftBarButtonClicked() {
@@ -43,16 +42,9 @@ class RestaurantViewController: UIViewController {
     }
     
     @objc func rightBarButtonClicked() {
-        
         let vc = storyboard?.instantiateViewController(withIdentifier: MapViewController.id) as! MapViewController
         navigationController?.pushViewController(vc, animated: true)
-        // 3. 화면 띄우기
-//        present(vc, animated: true)
-            
-        
     }
-    
-    
 }
 
 extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
@@ -100,6 +92,7 @@ extension RestaurantViewController: UISearchBarDelegate {
                 searchList.append(item)
             }
         }
+        
         filteredList = searchList
         view.endEditing(true)
         tableView.reloadData()

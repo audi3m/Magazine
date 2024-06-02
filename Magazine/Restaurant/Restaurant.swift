@@ -241,5 +241,12 @@ extension [Restaurant] {
         
     }
     
+    func annotate() {
+        for res in self {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = res.coordinate
+            annotation.title = res.name
+        }
+    }
     
 }
